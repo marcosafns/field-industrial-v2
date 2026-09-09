@@ -34,7 +34,7 @@ src/
 ├─ lib/hooks.ts           # rolagem suave, viewport, contadores, seção ativa
 ├─ components/
 │  ├─ brand/FieldMark.tsx # símbolo vetorizado + lockup do logotipo
-│  ├─ Preloader.tsx       # abertura: as placas do símbolo se montam
+│  ├─ Preloader.tsx       # abertura: a marca é construída passo a passo
 │  ├─ Header.tsx · Footer.tsx
 │  └─ sections/           # um arquivo por capítulo da página
 └─ App.tsx
@@ -68,8 +68,26 @@ fundo escuro e papel para marcar a virada de assunto.
 **Cantos chanfrados** (`bevel-sm`, `bevel-tr`) citam o corte das placas do
 símbolo — é o detalhe que amarra cartões, botões e imagens à marca.
 
+## Publicação
+
+Produção: **https://field-industrial.vercel.app**
+
+```bash
+npx vercel deploy --prod
+```
+
+O URL específico de cada deploy (`…-km-sites.vercel.app`) fica atrás do login
+da Vercel; o link para compartilhar é sempre o alias de produção acima.
+
 ## Decisões que valem registro
 
+- **Abertura em cinco etapas** (`Preloader.tsx`): canteiro → traçado dos
+  contornos → corte do rasgo do "F" → montagem das placas → acabamento e
+  assinatura. Toda a coreografia deriva de um único progresso 0→1, então
+  mudar `DURATION` não dessincroniza nada. Clique pula a sequência.
+- **Títulos vêm quebrados do conteúdo** (`headline: string[]`): a quebra de
+  linha é decisão editorial, não acidente de largura. Trecho entre
+  *asteriscos* recebe o acento laranja.
 - **Animação sob máscara**: o gatilho de viewport fica sempre no elemento que
   recorta, nunca no conteúdo deslocado — um filho empurrado para fora do
   recorte tem área de interseção zero e o `IntersectionObserver` nunca
