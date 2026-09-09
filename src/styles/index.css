@@ -44,7 +44,9 @@
   --shell: clamp(1.25rem, 5vw, 5.5rem);
   --rule: color-mix(in oklab, #46586b 34%, transparent);
   --rule-light: color-mix(in oklab, #05080c 12%, transparent);
-  --header-h: 76px;
+  --header-h: 62px;
+  /* altura do cabeçalho no topo da página: barra utilitária + barra principal */
+  --header-h-top: 116px;
 }
 
 /* ============================================================

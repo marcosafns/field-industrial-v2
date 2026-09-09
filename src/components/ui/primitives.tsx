@@ -72,6 +72,42 @@ export function Fade({
 }
 
 /* ------------------------------------------------------------------
+   Título de seção
+
+   As linhas vêm prontas do conteúdo, uma por entrada, para que a
+   quebra seja uma decisão editorial e não um acidente de largura.
+   Trecho entre *asteriscos* recebe o acento laranja.
+   ------------------------------------------------------------------ */
+
+export function Headline({
+  lines,
+  className = '',
+  size,
+}: {
+  lines: readonly string[]
+  className?: string
+  size: string
+}) {
+  return (
+    <span className={`display block ${className}`} style={{ fontSize: size }}>
+      {lines.map((line, i) => (
+        <Reveal key={line} delay={i}>
+          {line.split(/\*(.+?)\*/g).map((chunk, j) =>
+            j % 2 === 1 ? (
+              <span key={j} className="text-accent">
+                {chunk}
+              </span>
+            ) : (
+              <span key={j}>{chunk}</span>
+            ),
+          )}
+        </Reveal>
+      ))}
+    </span>
+  )
+}
+
+/* ------------------------------------------------------------------
    Régua de seção — a "divisória" técnica que separa os capítulos
    ------------------------------------------------------------------ */
 

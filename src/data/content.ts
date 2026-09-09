@@ -17,7 +17,6 @@ export const company = {
     'https://wa.me/5514997575433?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20a%20Field%20Industrial.',
   email: 'contato@fieldindustrial.com.br',
   linkedin: 'https://www.linkedin.com/company/fieldindustrial',
-  instagram: 'https://www.instagram.com/fieldindustrial',
   site: 'www.fieldindustrial.com.br',
 }
 
@@ -32,7 +31,7 @@ export const nav = [
 
 export const hero = {
   eyebrow: 'Engenharia · Planejamento · Gestão',
-  lines: ['Engenharia', 'aplicada à', 'tomada de decisão'],
+  headline: ['Engenharia', 'aplicada à', 'tomada de', '*decisão*'],
   body: 'A Field Industrial estrutura grandes paradas de manutenção, obras industriais e projetos de engenharia — integrando conhecimento técnico, planejamento e gestão de riscos para transformar desafios complexos em resultados previsíveis.',
   meta: [
     { k: 'Desde', v: '2007 em campo' },
@@ -51,7 +50,7 @@ export const metrics = [
 export const about = {
   index: '01',
   kicker: 'Quem somos',
-  title: 'Engenharia aplicada à tomada de decisão',
+  headline: ['Planejamento estratégico', 'de empreendimentos', '*industriais*'],
   paragraphs: [
     'A Field Industrial é especializada no planejamento estratégico de empreendimentos industriais. Atuamos na estruturação de grandes paradas de manutenção, obras industriais e projetos de engenharia.',
     'Integramos conhecimento técnico, planejamento e gestão de riscos para transformar desafios complexos em resultados previsíveis e sustentáveis.',
@@ -79,7 +78,7 @@ export const about = {
 export const domains = {
   index: '02',
   kicker: 'Áreas de atuação',
-  title: 'Frentes estratégicas em todo o ciclo do empreendimento',
+  headline: ['Frentes estratégicas', 'em todo o ciclo do', '*empreendimento*'],
   lede: 'Atuamos em frentes que geram valor em todo o ciclo do empreendimento industrial, integrando engenharia, planejamento e gestão para entregar resultados consistentes.',
   items: [
     {
@@ -125,7 +124,7 @@ export const domains = {
 export const services = {
   index: '03',
   kicker: 'Serviços',
-  title: 'O que entregamos',
+  headline: ['O que', '*entregamos*'],
   lede: 'Cada serviço nasce da mesma disciplina: entender o ativo, dimensionar o risco e devolver ao cliente uma decisão sustentada por evidência técnica.',
   items: [
     {
@@ -218,8 +217,8 @@ export const services = {
 
 export const method = {
   index: '04',
-  kicker: 'Como transformamos estratégia em execução',
-  title: 'Seis movimentos, uma disciplina',
+  kicker: 'Método',
+  headline: ['Como transformamos', 'estratégia em *execução*'],
   lede: 'Convertemos objetivos estratégicos em planos sólidos e executáveis, integrando pessoas, processos e tecnologia para garantir resultados com segurança, prazo e custo sob controle.',
   steps: [
     {
@@ -296,7 +295,7 @@ export const method = {
 export const why = {
   index: '05',
   kicker: 'Por que a Field',
-  title: 'Mais do que entregar projetos, entregamos previsibilidade',
+  headline: ['Mais do que entregar', 'projetos, entregamos', '*previsibilidade*'],
   lede: 'Unimos experiência prática, conhecimento técnico e visão estratégica para transformar desafios complexos em valor real para o seu negócio.',
   items: [
     {
@@ -334,10 +333,11 @@ export const why = {
 export const history = {
   index: '06',
   kicker: 'Nossa história',
-  title: 'Uma trajetória construída em campo',
+  headline: ['Uma trajetória', 'construída em *campo*'],
   paragraphs: [
     'A Field Industrial nasceu da experiência construída por **Fernando Henrique de Lima** ao longo de mais de 18 anos de atuação na indústria.',
     'Da execução no chão de fábrica ao planejamento de grandes empreendimentos, essa trajetória demonstrou que os maiores desafios de uma obra ou parada são definidos muito antes da execução: **no planejamento**.',
+    'Foi dessa experiência que surgiu a Field Industrial, unindo **engenharia, planejamento e gestão** para transformar conhecimento técnico em resultados.',
   ],
   quote: {
     text: 'Planejar é reduzir as incertezas a um nível aceitável para a tomada de decisão.',
@@ -375,7 +375,7 @@ export const history = {
 
 export const philosophy = {
   kicker: 'Nossa filosofia',
-  title: 'O que nos move e nos diferencia',
+  headline: ['O que nos move', 'e nos *diferencia*'],
   lede: 'Nossa filosofia orienta cada decisão, cada plano e cada entrega.',
   cards: [
     {
@@ -433,7 +433,7 @@ export const clients = [
 
 export const contact = {
   kicker: 'Contato',
-  title: "Let's build what's next, together.",
+  headline: ['Let’s build', 'what’s next,', '*together.*'],
   lede: 'Conte o desafio. Devolvemos um caminho técnico — escopo, riscos e ordem de grandeza — em até 24 horas úteis.',
   assurances: ['Resposta em até 24h', 'Sem compromisso', 'Equipe especializada'],
 }

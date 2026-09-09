@@ -9,8 +9,11 @@ export function Footer() {
       <div className="shell py-14 sm:py-16">
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
-            <FieldLogo height="3rem" showTagline />
-            <p className="mt-7 max-w-[26rem] text-[13.5px] leading-relaxed text-silver-400">
+            <FieldLogo height="3rem" />
+            <p className="label-tech mt-5 text-silver-400/70">
+              Turning challenges <span className="text-accent">into</span> opportunity
+            </p>
+            <p className="mt-6 max-w-[26rem] text-[13.5px] leading-relaxed text-silver-400">
               Planejamento estratégico de empreendimentos industriais — grandes paradas de
               manutenção, engenharia mecânica e obras.
             </p>

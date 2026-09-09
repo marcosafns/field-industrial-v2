@@ -13,23 +13,7 @@ import { History } from './components/sections/History'
 import { Philosophy } from './components/sections/Philosophy'
 import { Clients } from './components/sections/Clients'
 import { Contact } from './components/sections/Contact'
-import { useScrollProgress, useSmoothScroll } from './lib/hooks'
-
-function ProgressRail({ active }: { active: boolean }) {
-  const p = useScrollProgress()
-  return (
-    <div
-      aria-hidden
-      className="fixed top-0 left-0 z-[60] h-px w-full bg-transparent transition-opacity duration-500"
-      style={{ opacity: active ? 1 : 0 }}
-    >
-      <div
-        className="h-full origin-left bg-accent"
-        style={{ transform: `scaleX(${p})`, willChange: 'transform' }}
-      />
-    </div>
-  )
-}
+import { useSmoothScroll } from './lib/hooks'
 
 export default function App() {
   const [ready, setReady] = useState(false)
@@ -44,7 +28,6 @@ export default function App() {
   return (
     <>
       <Preloader onDone={() => setReady(true)} />
-      <ProgressRail active={ready} />
 
       <a
         href="#empresa"

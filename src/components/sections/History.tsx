@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from 'motion/react'
 import { useRef } from 'react'
 import { history } from '../../data/content'
-import { Fade, Reveal, SectionRule } from '../ui/primitives'
+import { Fade, Headline, SectionRule } from '../ui/primitives'
 
 /** Renderiza **negrito** dentro dos parágrafos do conteúdo. */
 function RichText({ text }: { text: string }) {
@@ -35,12 +35,8 @@ export function History() {
 
         <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7">
-            <h2
-              className="display text-white"
-              style={{ fontSize: 'clamp(2rem, 4.2vw, 3.9rem)' }}
-            >
-              <Reveal delay={0}>Uma trajetória</Reveal>
-              <Reveal delay={1}>construída em campo</Reveal>
+            <h2 className="text-white">
+              <Headline lines={history.headline} size="clamp(2rem, 4.2vw, 3.9rem)" />
             </h2>
 
             <div className="mt-9 max-w-[42rem] space-y-5">
@@ -73,10 +69,10 @@ export function History() {
               <figcaption className="mt-8 flex items-center gap-4 border-t border-white/10 pt-6">
                 <img
                   src="/media/fernando.jpg"
-                  alt=""
+                  alt={history.quote.author}
                   loading="lazy"
                   decoding="async"
-                  className="h-12 w-12 shrink-0 object-cover grayscale"
+                  className="h-14 w-14 shrink-0 object-cover object-top"
                 />
                 <span>
                   <span className="block text-[14px] font-medium text-white">

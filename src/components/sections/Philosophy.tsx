@@ -1,5 +1,5 @@
 import { philosophy, segments } from '../../data/content'
-import { Fade, ParallaxFigure, Reveal } from '../ui/primitives'
+import { Fade, Headline, ParallaxFigure } from '../ui/primitives'
 
 export function Philosophy() {
   return (
@@ -32,14 +32,8 @@ export function Philosophy() {
 
           {/* Missão · Visão · Propósito */}
           <div className="lg:col-span-8">
-            <h2
-              className="display text-white"
-              style={{ fontSize: 'clamp(1.9rem, 3.6vw, 3.1rem)' }}
-            >
-              <Reveal delay={0}>O que nos move</Reveal>
-              <Reveal delay={1}>
-                e nos <span className="text-accent">diferencia</span>
-              </Reveal>
+            <h2 className="text-white">
+              <Headline lines={philosophy.headline} size="clamp(1.9rem, 3.6vw, 3.1rem)" />
             </h2>
 
             <Fade delay={0.12}>

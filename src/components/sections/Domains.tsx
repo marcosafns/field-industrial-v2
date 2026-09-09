@@ -1,5 +1,5 @@
 import { domains } from '../../data/content'
-import { Fade, Reveal, SectionRule } from '../ui/primitives'
+import { Fade, Headline, SectionRule } from '../ui/primitives'
 
 export function Domains() {
   return (
@@ -13,12 +13,8 @@ export function Domains() {
         />
 
         <div className="grid gap-10 lg:grid-cols-12 lg:items-end lg:gap-16">
-          <h2
-            className="display text-navy-900 lg:col-span-7"
-            style={{ fontSize: 'clamp(2rem, 4.2vw, 3.9rem)' }}
-          >
-            <Reveal delay={0}>Frentes estratégicas em</Reveal>
-            <Reveal delay={1}>todo o ciclo do empreendimento</Reveal>
+          <h2 className="text-navy-900 lg:col-span-7">
+            <Headline lines={domains.headline} size="clamp(2rem, 4.2vw, 3.9rem)" />
           </h2>
           <Fade delay={0.15} className="lg:col-span-5">
             <p className="text-[15.5px] leading-relaxed text-steel">{domains.lede}</p>

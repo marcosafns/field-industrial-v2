@@ -1,5 +1,5 @@
 import { about, compliance } from '../../data/content'
-import { Fade, ParallaxFigure, Reveal, SectionRule } from '../ui/primitives'
+import { Fade, Headline, ParallaxFigure, SectionRule } from '../ui/primitives'
 
 export function About() {
   return (
@@ -10,15 +10,8 @@ export function About() {
         <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">
           {/* Coluna editorial */}
           <div className="lg:col-span-7">
-            <h2
-              className="display text-white"
-              style={{ fontSize: 'clamp(2.1rem, 4.6vw, 4.25rem)' }}
-            >
-              <Reveal delay={0}>Planejamento estratégico</Reveal>
-              <Reveal delay={1}>de empreendimentos</Reveal>
-              <Reveal delay={2}>
-                <span className="text-accent">industriais</span>
-              </Reveal>
+            <h2 className="text-white">
+              <Headline lines={about.headline} size="clamp(2.1rem, 4.6vw, 4.25rem)" />
             </h2>
 
             <div className="mt-9 max-w-[44rem] space-y-6">

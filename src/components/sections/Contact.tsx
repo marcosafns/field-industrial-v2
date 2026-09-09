@@ -1,5 +1,5 @@
 import { company, contact } from '../../data/content'
-import { ActionLink, Fade, Reveal } from '../ui/primitives'
+import { ActionLink, Fade, Headline } from '../ui/primitives'
 
 const channels = [
   { k: 'Telefone · WhatsApp', v: company.phone, href: company.phoneHref },
@@ -52,15 +52,8 @@ export function Contact() {
 
         <div className="grid gap-14 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-7">
-            <h2
-              className="display text-white"
-              style={{ fontSize: 'clamp(2.1rem, 5vw, 4.5rem)' }}
-            >
-              <Reveal delay={0}>Let&rsquo;s build</Reveal>
-              <Reveal delay={1}>what&rsquo;s next,</Reveal>
-              <Reveal delay={2}>
-                <span className="text-accent">together.</span>
-              </Reveal>
+            <h2 className="text-white">
+              <Headline lines={contact.headline} size="clamp(2.1rem, 5vw, 4.5rem)" />
             </h2>
 
             <Fade delay={0.2}>

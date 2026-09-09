@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from 'motion/react'
 import { useState } from 'react'
 import { services } from '../../data/content'
-import { Fade, Reveal, SectionRule } from '../ui/primitives'
+import { Fade, Headline, SectionRule } from '../ui/primitives'
 
 export function Services() {
   const [active, setActive] = useState(0)
@@ -18,12 +18,8 @@ export function Services() {
         />
 
         <div className="grid gap-10 lg:grid-cols-12 lg:items-end lg:gap-16">
-          <h2
-            className="display text-white lg:col-span-6"
-            style={{ fontSize: 'clamp(2rem, 4.2vw, 3.9rem)' }}
-          >
-            <Reveal delay={0}>O que</Reveal>
-            <Reveal delay={1}>entregamos</Reveal>
+          <h2 className="text-white lg:col-span-6">
+            <Headline lines={services.headline} size="clamp(2rem, 4.2vw, 3.9rem)" />
           </h2>
           <Fade delay={0.15} className="lg:col-span-6">
             <p className="text-[15.5px] leading-relaxed text-silver-400">{services.lede}</p>

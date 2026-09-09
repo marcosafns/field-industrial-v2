@@ -1,5 +1,5 @@
 import { why } from '../../data/content'
-import { Fade, GhostIndex, Reveal, SectionRule } from '../ui/primitives'
+import { Fade, GhostIndex, Headline, SectionRule } from '../ui/primitives'
 
 export function WhyField() {
   return (
@@ -8,14 +8,8 @@ export function WhyField() {
         <SectionRule index={why.index} label={why.kicker} tone="light" right="Diferenciais" />
 
         <div className="grid gap-10 lg:grid-cols-12 lg:items-end lg:gap-16">
-          <h2
-            className="display text-navy-900 lg:col-span-7"
-            style={{ fontSize: 'clamp(2rem, 4.2vw, 3.9rem)' }}
-          >
-            <Reveal delay={0}>Mais do que entregar projetos,</Reveal>
-            <Reveal delay={1}>
-              entregamos <span className="text-accent">previsibilidade</span>
-            </Reveal>
+          <h2 className="text-navy-900 lg:col-span-7">
+            <Headline lines={why.headline} size="clamp(2rem, 4.2vw, 3.9rem)" />
           </h2>
           <Fade delay={0.15} className="lg:col-span-5">
             <p className="text-[15.5px] leading-relaxed text-steel">{why.lede}</p>

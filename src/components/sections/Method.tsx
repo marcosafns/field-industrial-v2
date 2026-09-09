@@ -1,7 +1,7 @@
 import { motion, useMotionValueEvent, useScroll, useSpring, useTransform } from 'motion/react'
 import { useEffect, useRef, useState } from 'react'
 import { method } from '../../data/content'
-import { Fade, Reveal, SectionRule } from '../ui/primitives'
+import { Fade, Headline, SectionRule } from '../ui/primitives'
 import { useMediaQuery } from '../../lib/hooks'
 
 function StepCard({ step, i }: { step: (typeof method.steps)[number]; i: number }) {
@@ -97,12 +97,9 @@ export function Method() {
 
       {/* Cabeçalho — some no desktop, onde volta fixado junto ao trilho */}
       <div className="shell relative pt-24 sm:pt-32 lg:hidden">
-        <SectionRule index={method.index} label="Método" right="Estratégia → Execução" />
-        <h2 className="display text-white" style={{ fontSize: 'clamp(2rem, 6vw, 2.75rem)' }}>
-          <Reveal delay={0}>Como transformamos</Reveal>
-          <Reveal delay={1}>
-            estratégia em <span className="text-accent">execução</span>
-          </Reveal>
+        <SectionRule index={method.index} label={method.kicker} right="Estratégia → Execução" />
+        <h2 className="text-white">
+          <Headline lines={method.headline} size="clamp(2rem, 6vw, 2.75rem)" />
         </h2>
         <Fade delay={0.15}>
           <p className="mt-6 text-[15.5px] leading-relaxed text-silver-400">{method.lede}</p>
@@ -118,16 +115,10 @@ export function Method() {
         <div className="lg:sticky lg:top-0 lg:flex lg:h-screen lg:flex-col lg:justify-center lg:overflow-hidden lg:pt-[var(--header-h)]">
           {/* Cabeçalho que permanece durante a fixação */}
           <div className="shell hidden lg:block">
-            <SectionRule index={method.index} label="Método" right="Estratégia → Execução" />
+            <SectionRule index={method.index} label={method.kicker} right="Estratégia → Execução" />
             <div className="grid grid-cols-12 items-end gap-16 pb-10">
-              <h2
-                className="display col-span-7 text-white"
-                style={{ fontSize: 'clamp(1.9rem, 3.4vw, 3.15rem)' }}
-              >
-                <Reveal delay={0}>Como transformamos</Reveal>
-                <Reveal delay={1}>
-                  estratégia em <span className="text-accent">execução</span>
-                </Reveal>
+              <h2 className="col-span-7 text-white">
+                <Headline lines={method.headline} size="clamp(1.9rem, 3.4vw, 3.15rem)" />
               </h2>
               <Fade delay={0.15} className="col-span-5">
                 <p className="text-[14.5px] leading-relaxed text-silver-400">{method.lede}</p>

@@ -78,13 +78,11 @@ export function FieldLogo({
   height = '2.5rem',
   className = '',
   tone = 'light',
-  showTagline = false,
 }: {
   /** Altura do símbolo. Todo o lockup é dimensionado em `em` a partir dela. */
   height?: string
   className?: string
   tone?: 'light' | 'dark'
-  showTagline?: boolean
 }) {
   const primary = tone === 'light' ? 'text-white' : 'text-navy-900'
   const secondary = tone === 'light' ? 'text-silver-400' : 'text-steel'
@@ -132,16 +130,6 @@ export function FieldLogo({
           <span aria-hidden className="h-px w-[1.1em] shrink-0 bg-current opacity-55" />
         </span>
 
-        {showTagline && (
-          <span
-            className={`label-tech mt-[0.42em] whitespace-nowrap ${
-              tone === 'light' ? 'text-silver-400/80' : 'text-steel'
-            }`}
-            style={{ fontSize: '0.155em', letterSpacing: '0.2em' }}
-          >
-            Turning challenges <span className="text-accent">into</span> opportunity
-          </span>
-        )}
       </span>
     </span>
   )

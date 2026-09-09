@@ -53,7 +53,10 @@ export function Hero({ ready }: { ready: boolean }) {
       <div aria-hidden className="grid-field absolute inset-0 -z-10 opacity-[0.18]" />
 
       {/* Conteúdo */}
-      <motion.div style={{ y: contentY, opacity: contentFade }} className="shell relative pb-14 sm:pb-20">
+      <motion.div
+        style={{ y: contentY, opacity: contentFade }}
+        className="shell relative pt-[calc(var(--header-h-top)+2rem)] pb-14 sm:pb-20"
+      >
         <div className="max-w-[62rem]">
           <span className="block overflow-hidden">
             <motion.span
@@ -66,19 +69,21 @@ export function Hero({ ready }: { ready: boolean }) {
           </span>
 
           <h1 className="mt-7 sm:mt-9">
-            {hero.lines.map((line, i) => (
-              <span key={line} className="block overflow-hidden">
+            {hero.headline.map((line, i) => (
+              <span key={line} className="block overflow-hidden py-[0.06em] -my-[0.06em]">
                 <motion.span
-                  {...enter(0.3 + i * 0.11)}
+                  {...enter(0.3 + i * 0.1)}
                   className="display block text-white"
                   style={{ fontSize: 'clamp(2.35rem, 7.4vw, 6.75rem)' }}
                 >
-                  {i === hero.lines.length - 1 ? (
-                    <>
-                      tomada de <span className="text-accent">decisão</span>
-                    </>
-                  ) : (
-                    line
+                  {line.split(/\*(.+?)\*/g).map((chunk, j) =>
+                    j % 2 === 1 ? (
+                      <span key={j} className="text-accent">
+                        {chunk}
+                      </span>
+                    ) : (
+                      <span key={j}>{chunk}</span>
+                    ),
                   )}
                 </motion.span>
               </span>
